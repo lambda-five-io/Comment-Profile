@@ -19,7 +19,7 @@ Intention | Request Type | Request URL | Request Body | Resonse Body
 --------- | ------------ | ------------ | ------------ | ----------- |
 Get info for a song with an id of 4| GET | /songs/4 | none | {plays: 302, likes: 43, reposts: 69, comments: 123}
 Get all comments for a song with an id of 21| GET | /songs/21/comments | none | [1 : {username: grant420, time: 0:42, postedAt: 03:21:04, text: "comment1"}, 2 : {username: grant421, time: 0:42, postedAt: 03:21:04, text: "comment2"}]
-Post a new comment for a song with an id of 21| POST | /songs/21/comments | {username: grant420, time: 0:42, postedAt: 03:21:04, text: "This song rocks!"} | none
-Reply to a comment with an id of 89 | POST | /songs/21/comments/89/replies | {username: user123, time: 1:45, postedAt: 17:54:32, text: "I agree, this song IS awesome"} | none
+Post a new comment for a song with an id of 21| POST | /songs/21/comments | Data type: JSON {username: grant420, time: 0:42, postedAt: 03:21:04, text: "comment"} | none
+Reply to a comment with an id of 89 | POST | /songs/21/comments/89/replies | Data type: JSON {username: user123, time: 1:45, postedAt: 17:54:32, text: "comment"} | none
 Delete a comment with an id of 72| DELETE | /songs/21/comments/72 | none | none
 Delete a reply with an id of 4 to a comment with an id of 72| DELETE | /songs/21/comments/72/replies/4 | none | none
