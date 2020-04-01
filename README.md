@@ -17,5 +17,5 @@ In order to initiate the application, follow these simple steps:
 
 Intention | Request Type | Request Body | Resonse Body
 --------- | ------------ | ------------ | ------------
-Get info for a song | GET | Example body goes here | Example Response goes here
+Get info for a song | GET | none | {plays: 302, likes: 43, reposts: 69, comments: 123}
 Example | Example | Example | Example | 
