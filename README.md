@@ -11,3 +11,11 @@ In order to initiate the application, follow these simple steps:
 6) npm run seed 
     this will seed all data into your database
 7) go to localhost:4000 to view app
+
+
+# CRUD API
+
+Intention | Request Type | Request Body | Resonse Body
+--------- | ------------ | ------------ | ------------
+Get info for a song | GET | Example body goes here | Example Response goes here
+Example | Example | Example | Example | 
