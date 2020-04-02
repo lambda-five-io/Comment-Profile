@@ -15,11 +15,11 @@ In order to initiate the application, follow these simple steps:
 
 # CRUD API
 
-Intention | Request Type | Request URL | Request Body | Resonse Body
+Intention | Request Type | Request URL | Example Input | Resonse Body
 --------- | ------------ | ------------ | ------------ | ----------- |
-Get info for a song with an id of 4| GET | /songs/4 | none | {plays: 302, likes: 43, reposts: 69, comments: 123}
-Get all comments for a song with an id of 21| GET | /songs/21/comments | none | [1 : {username: grant420, time: 0:42, postedAt: 03:21:04, text: "comment1"}, 2 : {username: grant710, time: 2:52, postedAt: 21:54:04, text: "comment2"}]
-Post a new comment for a song with an id of 21| POST | /songs/21/comments | Data type: JSON {username: grant420, time: 0:42, postedAt: 03:21:04, text: "comment"} | Returns a status code based on success
-Reply to a comment with an id of 89 | POST | /songs/21/comments/89/replies | Data type: JSON {username: user123, time: 1:45, postedAt: 17:54:32, text: "comment"} | Returns a status code based on success
-Delete a comment with an id of 72| DELETE | /songs/21/comments/72 | none | Returns a status code based on success
-Delete a reply with an id of 4 to a comment with an id of 72| DELETE | /songs/21/comments/72/replies/4 | none | Returns a status code based on success
+Get info for a song| GET | /songs/:songId | none | {plays: 302, likes: 43, reposts: 69, comments: 123}
+Get all comments for a song| GET | /songs/:songId/comments | none | [1 : {username: grant420, time: 0:42, postedAt: 03:21:04, text: "comment1"}, 2 : {username: grant710, time: 2:52, postedAt: 21:54:04, text: "comment2"}]
+Post a new comment for a song| POST | /songs/:songId/comments | Data type: JSON {username: grant420, time: 0:42, postedAt: 03:21:04, text: "comment"} | Returns a status code based on success
+Reply to a comment | POST | /songs/:songId/comments/:commentId/replies | Data type: JSON {username: user123, time: 1:45, postedAt: 17:54:32, text: "comment"} | Returns a status code based on success
+Delete a comment| DELETE | /songs/:songId/comments/:commentId | none | Returns a status code based on success
+Delete a reply | DELETE | /songs/:songId/comments/:commentId/replies/:replyId | none | Returns a status code based on success
