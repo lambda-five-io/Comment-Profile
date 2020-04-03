@@ -22,5 +22,5 @@ Get all comments for a song| GET | /songs/:songId/comments | none | [1 : {userId
 Post a new comment for a song| POST | /songs/:songId/comments | Data: JSON {userId: 4, time: 0:42, postedAt: 'Wed Apr 01 2020 18:52:09 GMT-0700', text: "comment"} | Returns a status code based on success
 Reply to a comment | POST | /songs/:songId/comments/:commentId/replies | Data: JSON {userId: 5, time: 1:45, postedAt: 'Wed Apr 01 2020 18:52:09 GMT-0700', text: "comment"} | Returns a status code based on success
 Update a song's stat | PATCH | /songs/:songId/trackers | Data: JSON   {likes: 211} | {plays: 100, likes: 212, reposts: 49, follows: 12, tracks: 3} Returns a status code based on success
-Delete a comment| DELETE | /comments/:commentId | none | Returns a status code based on success
+Delete a comment| DELETE | songs/:songId/comments/:commentId | none | Returns a status code based on success
 
